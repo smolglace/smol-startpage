@@ -12,7 +12,7 @@ html, body {
   height: 50%;
   margin: 50px;
   color: white;
-  background-image: "bg.jpg";
+  background-image: url("bg.jpg");
   margin: 1fr;  
 }
 

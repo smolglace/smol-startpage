@@ -12,6 +12,7 @@ html, body {
   height: 50%;
   margin: 50px;
   color: white;
+  background-color: #000;
   background-image: url("bg.jpg");
   background-position: center;
   background-size: auto;

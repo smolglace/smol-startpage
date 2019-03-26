@@ -12,7 +12,8 @@ html, body {
   height: 50%;
   margin: 50px;
   color: white;
-  background-iamge: "bg.jpg";
+  background-color: #050010;
+  margin: 1fr;  
 }
 
 i {
@@ -26,7 +27,7 @@ i {
   font-family: "Ubuntu Mono", "Courier-New", monospace;
   font-size: 15px;
   padding: 0.5em 1em;
-  margin: 10px;
+  margin: 5px;
   transition: 0.2s;
 }
 
@@ -47,7 +48,6 @@ i {
   padding: 0.3em;
   display: flex;
   flex-direction: column;
-  align-content: ;
 }
 
 .container > div:nth-child(1) {

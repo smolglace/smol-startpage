@@ -7,16 +7,16 @@
 */
 
 html, body {
-  padding: 50px;
-  height: 50%;
-  margin: 50px;
   color: white;
   background-color: #131313;
-  background-image: url("bg.jpg");
-  background-position: center;
-  background-size: 50%;
+  background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
+  background-size: 60%;
   background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 i {
   margin-left: 10px;
@@ -38,12 +38,19 @@ i {
   background-color: #999;
 }
 
+div.container {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  margin-right: -20%;
+}
+
 .container {
   border: 1px solid;
   border-radius: 10px;
   background-color: rgba(30, 30, 30, 1);
   color: white;
-  font-size: 25px;
+  font-size: 30px;
   text-align: justify;
   text-shadow: 4px 4px 5px #000;
   font-family: "Major Mono Display", "Trebuchet MS", sans-serif;

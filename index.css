@@ -7,16 +7,36 @@
 */
 
 html, body {
+  display:flex;
+  max-width: 900px;
+  margin: auto;
   color: white;
   background-color: #131313;
   background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
-  background-size: 40%;
+  background-size: 60%;
   background-repeat: no-repeat;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+@media(min-width: 568px){
+  div.container {
+  display: flex;
+  flex:1;
+}
+}
+
+@media(max-width:568px){
+  div.container {
+  display:flex;
+  flex-direction: column;
+}
+}
+
+#link {
+  display:flex;
+  align-items: center;
+  flex-basis: 15%;
+  justify-content: space-around;
+}
 
 i {
   margin-left: 10px;
@@ -38,41 +58,31 @@ i {
   background-color: #999;
 }
 
-div.container {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  margin-right: -20%;
-}
 
 .container {
   border: 1px solid;
   border-radius: 10px;
-  background-color: rgba(30, 30, 30, 1);
   color: white;
   font-size: 30px;
-  text-align: justify;
   text-shadow: 4px 4px 5px #000;
   font-family: "Major Mono Display", "Trebuchet MS", sans-serif;
   padding: 0.3em;
-  display: flex;
-  flex-direction: column;
 }
 
 .container > div:nth-child(1) {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 200, 250, 0.1);
   border-style: hidden hidden hidden solid;
   border-color: cyan;
   border-width: 5px;
 }
 .container > div:nth-child(2) {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(200, 0, 200, 0.1);
   border-style: hidden hidden hidden solid;
   border-color: magenta;
   border-width: 5px;
  }
 .container > div:nth-child(3) {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 200, 0, 0.1);
   border-style: hidden hidden hidden solid;
   border-color: #76FF03;
   border-width: 5px;

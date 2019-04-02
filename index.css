@@ -6,29 +6,42 @@
 }
 */
 
-html, body {
+html {
+  height:100%;
+}
+
+body, html {
   display:flex;
   max-width: 900px;
   margin: auto;
   color: white;
   background-color: #131313;
   background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
-  background-size: 60%;
+  background-position: center;
+  background-size: 30%;
   background-repeat: no-repeat;
+  */
 }
 
 @media(min-width: 568px){
   div.container {
   display: flex;
   flex:1;
-}
+  }
 }
 
-@media(max-width:568px){
+@media(max-width:450px){
   div.container {
   display:flex;
   flex-direction: column;
-}
+  }
+  
+  body {
+  background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
+  background-position: center;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  }
 }
 
 #link {

@@ -20,10 +20,9 @@ body, html {
   background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;
-  */
 }
 
-@media(min-width: 568px){
+@media(min-width: 570px){
   div.container {
   display: flex;
   flex:1;
@@ -52,7 +51,7 @@ body, html {
 }
 
 i {
-  margin-left: 10px;
+  margin:auto;
   width: 50px;
   padding: 0.3em;
 }
@@ -80,6 +79,7 @@ i {
   text-shadow: 4px 4px 5px #000;
   font-family: "Major Mono Display", "Trebuchet MS", sans-serif;
   padding: 0.3em;
+  
 }
 
 .container > div:nth-child(1) {
@@ -87,6 +87,7 @@ i {
   border-style: hidden hidden hidden solid;
   border-color: cyan;
   border-width: 5px;
+  
 }
 .container > div:nth-child(2) {
   background-color: rgba(200, 0, 200, 0.1);

@@ -8,8 +8,6 @@
 
 html {
   height:100%;
-  background-image: url(http://smolglace.github.io/mei_float.png);
-  float: left;
 }
 
 body, html {
@@ -102,4 +100,10 @@ i {
   border-style: hidden hidden hidden solid;
   border-color: #76FF03;
   border-width: 5px;
+}
+
+.mei {
+  height: 100%;
+  background-image: url(http://smolglace.github.io/smol-startpage/mei_float.png);
+  float: right;
 }

@@ -102,10 +102,10 @@ i {
   border-width: 5px;
 }
 
-.mei {
-  height: 100%;
-  background-image: url(http://smolglace.github.io/smol-startpage/mei_float.png);
-  background-size: 20%;
-  background-position: left;
-  float: right;
+.badge {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: auto;
 }

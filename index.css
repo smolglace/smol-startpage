@@ -16,10 +16,6 @@ body, html {
   margin: auto;
   color: white;
   background-color: #131313;
-  background-image: url(http://smolglace.github.io/smol-startpage/bg.jpg);
-  background-position: center;
-  background-size: 30%;
-  background-repeat: no-repeat;
 }
 
 @media(min-width: 570px){
@@ -36,11 +32,10 @@ body, html {
   }
 
   body {
-  background-image: url(http://smolglace.github.io/smol-startpage/bg.jpg);
+  background-image: url("http://smolglace.github.io/smol-startpage/mei_float.png");
   background-position: center;
-  background-size: 30%;
-  background-repeat: no-repeat;
-  }
+  background-position: left top;
+  background-repeat:no-repeat;background-attachment:fixed;
 }
 
 #link {
@@ -107,5 +102,5 @@ i {
   bottom: 0;
   left: 0;
   width: 20%;
-  height: auto;
+  height: 20
 }

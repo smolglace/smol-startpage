@@ -8,7 +8,6 @@
 
 html {
   height:100%;
-  width: auto;
 }
 
 body, html {
@@ -17,13 +16,14 @@ body, html {
   margin: auto;
   color: white;
   background-color: #131313;
-  background-image: url("http://smolglace.github.io/smol-startpage/bg.jpg");
+  background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
   background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;
+  */
 }
 
-@media(min-width: 570px){
+@media(min-width: 568px){
   div.container {
   display: flex;
   flex:1;
@@ -35,16 +35,14 @@ body, html {
   display:flex;
   flex-direction: column;
   }
-}
-
-/*
+  
   body {
-  background-image: url(http://smolglace.github.io/smol-startpage/bg.jpg);
+  background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
   background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;
   }
-*/
+}
 
 #link {
   display:flex;
@@ -54,7 +52,7 @@ body, html {
 }
 
 i {
-  margin:auto;
+  margin-left: 10px;
   width: 50px;
   padding: 0.3em;
 }
@@ -82,7 +80,6 @@ i {
   text-shadow: 4px 4px 5px #000;
   font-family: "Major Mono Display", "Trebuchet MS", sans-serif;
   padding: 0.3em;
-
 }
 
 .container > div:nth-child(1) {
@@ -90,7 +87,6 @@ i {
   border-style: hidden hidden hidden solid;
   border-color: cyan;
   border-width: 5px;
-
 }
 .container > div:nth-child(2) {
   background-color: rgba(200, 0, 200, 0.1);
@@ -104,13 +100,3 @@ i {
   border-color: #76FF03;
   border-width: 5px;
 }
-
-/*
-.mei {
-  height: 100%;
-  background-image: url("http://smolglace.github.io/smol-startpage/mei_float.png");
-  background-size: 20%;
-  background-position: left;
-  float: right;
-}
-*/

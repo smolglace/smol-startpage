@@ -35,7 +35,7 @@ body, html {
   display:flex;
   flex-direction: column;
   }
-  
+
   body {
   background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
   background-position: center;
@@ -99,4 +99,12 @@ i {
   border-style: hidden hidden hidden solid;
   border-color: #76FF03;
   border-width: 5px;
+}
+
+.badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 248px;
+  height: 248px;
 }

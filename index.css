@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Raleway|Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Raleway|Ubuntu+Mono|Libre+Barcode+128+Text');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 /*
 * {
   border: 1px solid #f1f1f1;
@@ -12,35 +15,76 @@ html {
 
 body, html {
   display:flex;
-  max-width: 900px;
+  width: max-content;
+  align-content: center;
   margin: auto;
   color: white;
   background-color: #131313;
-  background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
   background-position: center;
-  background-size: 30%;
+  background-image: url("https://smolglace.github.io/smol-startpage/bg.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  */
+}
+
+.title {
+  display:flex;
+  flex: 1;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+
+.codebar {
+  color: white;
+  font-family: "Libre Barcode 128 Text", "Ubuntu Mono", "Courier-New", monospace;
+  font-size: 42px;
+  transition: 0.2s;
 }
 
 @media(min-width: 568px){
   div.container {
   display: flex;
   flex:1;
+  flex-direction: row;
+  z-index: 1;
+  }
+  #link {
+    display: flex;
+    align-items: center;
+    flex-basis: 15%;
+    justify-content: space-around;
   }
 }
-
 @media(max-width:450px){
   div.container {
   display:flex;
   flex-direction: column;
+  z-index: 1;
+  font-size: 30px;
   }
-
+  #link {
+    display: flex;
+    align-items: center;
+    flex-basis: 5%;
+    justify-content: space-around;
+  }
+  .badge{
+    z-index: -2;
+  }
   body {
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+  }
+}
+  /*body {
   background-image: url(https://smolglace.github.io/smol-startpage/bg.jpg);
   background-position: center;
-  background-size: 30%;
-  background-repeat: no-repeat;
+  background-size: 60%;
+  background-repeat: no-repeat;*/
   }
 }
 
@@ -55,6 +99,8 @@ i {
   margin-left: 10px;
   width: 50px;
   padding: 0.3em;
+  text-align: center;
+  width: max-content;
 }
 
 .btn {
@@ -64,47 +110,111 @@ i {
   padding: 0.5em 1em;
   margin: 5px;
   transition: 0.2s;
+  width: auto;
+  text-align: center;
 }
 
 .btn:hover {
-  opacity: 1;
-  background-color: #999;
+  opacity: 2;
+  background-color: #fff;
+  color: black;
 }
 
 
 .container {
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 10px;
-  color: white;
+  color: #eee;
   font-size: 30px;
-  text-shadow: 4px 4px 5px #000;
+  text-shadow: 6px 6px 10px #000;
   font-family: "Major Mono Display", "Trebuchet MS", sans-serif;
-  padding: 0.3em;
+  padding: 0.2em;
+  width: max-content;
 }
 
 .container > div:nth-child(1) {
-  background-color: rgba(0, 200, 250, 0.1);
+  background-color: rgba(100, 200, 250, 0.2);
   border-style: hidden hidden hidden solid;
   border-color: cyan;
-  border-width: 5px;
+  border-width: 3px;
 }
 .container > div:nth-child(2) {
-  background-color: rgba(200, 0, 200, 0.1);
+  background-color: rgba(200, 100, 200, 0.2);
   border-style: hidden hidden hidden solid;
   border-color: magenta;
-  border-width: 5px;
+  border-width: 3px;
  }
 .container > div:nth-child(3) {
-  background-color: rgba(0, 200, 0, 0.1);
+  background-color: rgba(100, 200, 100, 0.2);
   border-style: hidden hidden hidden solid;
   border-color: #76FF03;
-  border-width: 5px;
+  border-width: 3px;
+}
+
+#mei {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 248px;
+  height: 248px;
 }
 
 .badge {
+  width: inherit;
+  height: inherit;
+  background-image: url("meismol.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.badge::before,
+.badge::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: #eee;
+
   position: absolute;
-  left: 0;
+  top: -.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.badge::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  color: black;
+  font-family: 'Ubuntu Mono', monospace;
+  padding: .5rem;
+  border-radius: .3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--tooltip-color);
+}
+
+.badge:hover::before,
+.badge:hover::after {
+  --scale: 1;
+}
+
+.badge::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
+
+.footer {
+  position: absolute;
   bottom: 0;
-  width: 248px;
-  height: 248px;
+  right: 15px;
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14px;
 }
